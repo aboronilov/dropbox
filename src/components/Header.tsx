@@ -2,13 +2,14 @@ import { SignInButton, SignedOut, UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { ThemeToggler } from './ThemeToggler'
 
 type Props = {}
 
 const Header = (props: Props) => {
     return (
         <header className='flex items-center justify-between'>
-            <Link href="/" className='flex items-center space-x-2'>
+            <Link href="/" className='flex items-center space-x-2 cursor-pointer'>
                 <div className='bg-[#0160FE] w-fit'>
                     <Image
                         src='https://www.shareicon.net/download/2016/07/13/606936_dropbox_2048x2048.png'
@@ -23,6 +24,7 @@ const Header = (props: Props) => {
 
             <div className="px-5 flex space-x-2 items-center">
                 {/* Theme toggle */}
+                <ThemeToggler />
                 <UserButton afterSignOutUrl='/'/>
                 <SignedOut>
                     <SignInButton afterSignInUrl='/dashboard' mode='modal'/>
