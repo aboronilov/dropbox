@@ -18,6 +18,7 @@ const Header = (props: Props) => {
                         width={50}
                     />
                 </div>
+                <h1 className='font-bold text-xl'>Dropbox</h1>
             </Link>
 
             <div className="px-5 flex space-x-2 items-center">
