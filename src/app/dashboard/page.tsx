@@ -1,10 +1,14 @@
-import React from 'react'
+import Dropzone from '@/components/Dropzone';
+import { auth } from '@clerk/nextjs';
 
 type Props = {}
 
 const Dashboard = (props: Props) => {
+  const { userId } = auth();
   return (
-    <div>Dashboard</div>
+    <section>
+      <Dropzone />
+    </section>
   )
 }
 
